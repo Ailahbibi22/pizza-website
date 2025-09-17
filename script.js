@@ -215,7 +215,6 @@ if (document.querySelector('.order-section')) {
   });
 }
 
-// --- INITIAL LOAD (for both pages) ---
 document.addEventListener('DOMContentLoaded', () => {
   cart = JSON.parse(localStorage.getItem("cart") || '[]');
   if (document.getElementById('cartItems')) updateCartDisplay();   // Home
