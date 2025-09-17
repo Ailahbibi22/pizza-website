@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Pizza | Pizza Palace</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar copied from index.html -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Pizza Palace</div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html#menu">Menu</a></li>
+  <li><a href="index.html#why-us">Why Choose Us</a></li>
+  <li><a href="order.html">Order</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+      <div class="navbar-right">
+        <button class="signup-btn" id="signupBtn">Sign Up</button>
+        <div class="cart-container">
+          <button class="cart-icon-btn" id="cartBtn">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </button>
+          <div class="cart-dropdown" id="cartDropdown">
+            <h4>Your Cart</h4>
+            <div class="cart-items" id="cartItems">
+              <div class="empty-cart">Cart is empty</div>
+            </div>
+            <div class="cart-total" id="cartTotal">Total: $0.00</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sign Up Modal copied from index.html -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <h2>Create Your Account</h2>
+      <form id="signupForm" autocomplete="off">
+        <label for="signupName">Name</label>
+        <input type="text" id="signupName" name="name" required>
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" name="email" required>
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" name="password" required>
+        <label for="signupConfirm">Confirm Password</label>
+        <input type="password" id="signupConfirm" name="confirm" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <!-- ...rest of your order.html content... -->
+
+  <script src="script.js"></script>
+
+  <section class="order-section">
+  <h2 class="section-title">Complete Your Order</h2>
+  <div class="order-container">
+    <!-- Cart Summary -->
+    <div class="order-cart-summary">
+      <h3>Cart Summary</h3>
+      <div id="orderCartItems">
+        <!-- Cart items will be rendered here by JS -->
+      </div>
+      <div class="order-cart-totals">
+        <div><span>Subtotal:</span><span id="orderSubtotal">$0.00</span></div>
+        <div><span>Tax (8%):</span><span id="orderTax">$0.00</span></div>
+        <div><span>Delivery Fee:</span><span id="orderDeliveryFee">$0.00</span></div>
+        <div class="order-total"><span>Total:</span><span id="orderTotal">$0.00</span></div>
+      </div>
+    </div>
+
+    <!-- Order Form -->
+    <form class="order-form" id="orderForm" autocomplete="off">
+      <h3>Customer Information</h3>
+      <label>Name <input type="text" name="name" required></label>
+      <label>Phone <input type="tel" name="phone" required pattern="[0-9+\-\s]{7,}"></label>
+      <label>Email (optional) <input type="email" name="email"></label>
+      <label>Delivery Address <input type="text" name="address" required></label>
+
+      <h3>Delivery / Pickup</h3>
+      <div class="order-radio-group">
+        <label><input type="radio" name="deliveryOption" value="delivery" checked> <span>🚚 Home Delivery</span></label>
+        <label><input type="radio" name="deliveryOption" value="pickup"> <span>🏠 Pickup</span></label>
+      </div>
+
+      <h3>Payment Method</h3>
+      <div class="order-radio-group">
+        <label><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label>
+        <label class="disabled"><input type="radio" name="payment" value="card" disabled> Credit Card (coming soon)</label>
+      </div>
+
+      <button type="submit" class="place-order-btn">Place Order</button>
+    </form>
+  </div>
+</section>
+
+<!-- Order Confirmation Modal -->
+<div class="modal" id="orderConfirmModal">
+  <div class="modal-content">
+    <button class="close-modal" id="closeOrderConfirm">&times;</button>
+    <h2>✅ Thank you!</h2>
+    <p>Your pizza is on the way.</p>
+  </div>
+</div>
+
+
+
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p class="contact-intro">We’d love to hear from you! Reach out for orders, feedback, or support.</p>
+
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>📞 Phone:</strong> +92 300 1234567</p>
+        <p><strong>📧 Email:</strong> pizza@example.com</p>
+        <p><strong>📍 Address:</strong> Main Road, abc</p>
+        <p><strong>🕒 Hours:</strong> Mon–Sat: 12 PM – 11 PM | Sun: 2 PM – 10 PM</p>
+
+        <!-- Google Map Embed -->
+<div class="map">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332702.4585905464!2d72.7511!3d33.6844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf68b41f3c77%3A0xf3f5f52f92c9c!2sIslamabad!5e0!3m2!1sen!2s!4v1694074800000" 
+    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</div>
+</div> <!-- end contact-info -->
+    </div> <!-- end contact-grid -->
+  </div> <!-- end contact-container -->
+</section> 
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Pizza Palace</h3>
+      <p>123 Pizza Street, Food City, Country</p>
+      <p>Email: <a href="mailto:info@pizzapalace.com">info@pizzapalace.com</a></p>
+      <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Pizza Palace. All rights reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Palace</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Pizza Palace</div>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html#menu">Menu</a></li>
+  <li><a href="index.html#why-us">Why Choose Us</a></li>
+  <li><a href="order.html">Order</a></li>
+<li><a href="order.html#contact">Contact</a></li>
+</ul>
+      <div class="navbar-right">
+        <button class="signup-btn" id="signupBtn">Sign Up</button>
+        <div class="cart-container">
+          <button class="cart-icon-btn" id="cartBtn">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </button>
+          <div class="cart-dropdown" id="cartDropdown">
+            <h4>Your Cart</h4>
+            <div class="cart-items" id="cartItems">
+              <div class="empty-cart">Cart is empty</div>
+            </div>
+            <div class="cart-total" id="cartTotal">Total: $0.00</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Fresh, Hot & Delicious Pizzas</h1>
+      <p>Made with love, delivered on time 🍕</p>
+      <a href="order.html" class="btn order-btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Sign Up Modal -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <h2>Create Your Account</h2>
+      <form id="signupForm" autocomplete="off">
+        <label for="signupName">Name</label>
+        <input type="text" id="signupName" name="name" required>
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" name="email" required>
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" name="password" required>
+        <label for="signupConfirm">Confirm Password</label>
+        <input type="password" id="signupConfirm" name="confirm" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Menu Section -->
+<section class="menu-section" id="menu">
+  <h2 class="section-title">Explore menu</h2>
+  <div class="pizza-grid">
+    <div class="pizza-card">
+      <img src="images/margherita.jpg" alt="Margherita">
+      <h3>Margherita</h3>
+      <p>Classic delight with mozzarella, tomatoes & basil.</p>
+      <div class="pizza-bottom">
+        <span class="pizza-price">$9.99</span>
+        <button class="add-cart" data-name="Margherita" data-price="9.99">Add to Cart</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+      <img src="images/pepperoni.jpg" alt="Pepperoni">
+      <h3>Pepperoni</h3>
+      <p>Pepperoni, mozzarella & signature tomato sauce.</p>
+      <div class="pizza-bottom">
+        <span class="pizza-price">$11.49</span>
+        <button class="add-cart" data-name="Pepperoni" data-price="11.49">Add to Cart</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+      <img src="images/veggie.jpg" alt="Veggie">
+      <h3>Veggie Supreme</h3>
+      <p>Loaded with bell peppers, olives, onions & mushrooms.</p>
+      <div class="pizza-bottom">
+        <span class="pizza-price">$10.99</span>
+        <button class="add-cart" data-name="Veggie Supreme" data-price="10.99">Add to Cart</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+      <img src="images/bbq chicken pizza.jpg" alt="bbq chicken pizza">
+      <h3>BBQ chicken pizza</h3>
+      <p>Grilled chicken, BBQ sauce, onions & cheese.</p>
+      <div class="pizza-bottom">
+        <span class="pizza-price">$12.49</span>
+        <button class="add-cart" data-name="BBQ Chicken" data-price="12.49">Add to Cart</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+      <img src="images/Hawiian.jpg" alt="Hawaiian">
+      <h3>Hawaiian</h3>
+      <p>Ham, pineapple, mozzarella & tomato sauce.</p>
+      <div class="pizza-bottom">
+        <span class="pizza-price">$11.99</span>
+        <button class="add-cart" data-name="Hawaiian" data-price="11.99">Add to Cart</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+  <img src="images/four_cheese .jpg" alt="Four_Cheese">
+  <h3>Four Cheese</h3>
+  <p>Mozzarella, cheddar, parmesan & blue cheese.</p>
+  <div class="pizza-bottom">
+    <span class="pizza-price">$12.99</span>
+    <button class="add-cart" data-name="Four_Cheese" data-price="12.99">Add to Cart</button>
+  </div>
+</div>
+  </div>
+</section>
+
+
+
+<section class="why-us" id="why-us">
+  <h2 class="section-title">Why Choose Us</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">
+        <img src="images/delivery.png" alt="On-Time Delivery">
+      </div>
+      <h3>On-Time Delivery</h3>
+      <p>Your pizza arrives hot and fresh, right on schedule, every time.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <img src="images/italian.png" alt="Quality Cooking">
+      </div>
+      <h3>Quality Cooking</h3>
+      <p>Our chefs use authentic recipes and bake every pizza to perfection.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">
+        <img src="images/veggie.jpg" alt="Fresh Veggies">
+      </div>
+      <h3>Fresh Veggies</h3>
+      <p>We use only the freshest vegetables and ingredients for every order.</p>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Pizza Palace</h3>
+      <p>123 Pizza Street, Food City, Country</p>
+      <p>Email: <a href="mailto:info@pizzapalace.com">info@pizzapalace.com</a></p>
+      <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Pizza Palace. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
