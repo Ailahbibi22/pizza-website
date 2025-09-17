@@ -1,4 +1,4 @@
-/* Reset & Base */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: #222; }
 
@@ -112,7 +112,6 @@ body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: 
   margin-left: 1rem;
 }
 
-/* 📱 Small phones (portrait) */
 @media (max-width: 480px) {
   .nav-links {
     display: none; /* hide normal links */
@@ -132,7 +131,6 @@ body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: 
   .signup-btn { padding: 0.4rem 0.8rem; font-size: 0.9rem; }
 }
 
-/* 📲 Larger phones + small tablets */
 @media (min-width: 481px) and (max-width: 768px) {
   .nav-links {
     display: none;
@@ -149,24 +147,20 @@ body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: 
   .signup-btn { font-size: 0.95rem; padding: 0.45rem 1rem; }
 }
 
-/* 💻 Tablets + fold devices (like Galaxy Z Fold open) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav-links { gap: 1rem; }
   .signup-btn { padding: 0.5rem 1rem; font-size: 1rem; }
   .hamburger { display: none; } /* normal menu */
 }
 
-/* 🖥️ Small laptops */
 @media (min-width: 1025px) and (max-width: 1200px) {
   .nav-links { gap: 1.2rem; }
 }
 
-/* 🖥️💎 Big desktops */
 @media (min-width: 1201px) {
   .nav-links { gap: 1.5rem; }
 }
 
-/* 🔹 Fix for Galaxy S8+, Galaxy Z Fold narrow screens */
 @media (max-width: 380px) {
   .navbar {
     padding: 0.5rem 1rem;
@@ -889,18 +883,18 @@ body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: 
   font-size: 0.95rem;
 }
 .map {
-  margin: 20px auto;         /* adds space around, centers it */
+  margin: 20px auto;         
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 600px;          /* keep it limited */
-  height: 250px;             /* fixed height so it doesn’t expand too much */
+  max-width: 600px;        
+  height: 250px;            
 }
 
 .map iframe {
   width: 100%;
   height: 100%;
-  display: block;            /* removes extra inline spacing */
+  display: block;          
 }
 
 
@@ -914,11 +908,11 @@ body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: 
 .footer {
   background: #222;
   color: #fff;
-  text-align: center;   /* centers text */
+  text-align: center;   
   padding: 20px;
-  width: 100%;          /* full width */
-  clear: both;          /* clears floats above */
-  position: relative;   /* normal flow */
+  width: 100%;         
+  clear: both;          
+  position: relative;   
   bottom: 0;
  
 }
@@ -978,7 +972,6 @@ body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: 
   }
 }
 
-/* 🔹 Super small devices (Galaxy S8+, Galaxy Z Fold 5 folded) */
 @media (max-width: 360px) {
   .navbar {
     padding: 0.4rem 0.8rem;
@@ -1016,7 +1009,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: 
   }
 }
 
-/* 🔹 Galaxy Z Fold 5 in tablet mode (~882px height, ~344px width) */
+
 @media (max-width: 344px) {
   .logo {
     font-size: 1rem;
