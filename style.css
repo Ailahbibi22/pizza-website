@@ -47,23 +47,19 @@ body { font-family: 'Segoe UI', Arial, sans-serif;  background: #111010; color: 
   align-items: center;
   gap: 1rem;
 }
-.signup-btn {
-  background: #ff9800;
-  color: #fff!important;
-  border: none;
-  padding: 0.5rem 1.2rem;
-  border-radius: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.form-btn {
-  background-color:#ff9800;
-  color: white;              
+
+#signupModal .form-btn {
+  background-color: #ff9800 !important;
+  color: #fff !important;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  display: inline-block;
+}
+#signupModal .form-btn:hover {
+  background-color: #e67e22 !important;
 }
 
 .form-btn:hover {
